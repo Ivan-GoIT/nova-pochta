@@ -1,14 +1,13 @@
-import checkTTN from "../../helpers/checkTTN"
-import Button from "../Button/Button"
+import PageClicker from "../PageClicker/PageClicker"
 
-const AppControls = () => { 
-    return (
-              <div>
-        <Button title='Перевірити ТТН' onClickHandler={ checkTTN} />
-        <Button title='Список відділень' />
-      </div>
+const AppControls = () => {
+  return (
+    <div>
+      <PageClicker title='Перевірити ТТН'  />
+      <PageClicker title='Список відділень' />
+    </div>
 
-    )
+  )
 }
 
 export default AppControls
