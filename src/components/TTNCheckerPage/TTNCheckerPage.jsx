@@ -17,7 +17,6 @@ const TTNCheccerPage = () => {
   };
   const onClickHandler = () => {
     if (ttnString.length !== 14) {
-      console.log(ttnString.length);
       alert('Должно быть 14 цыфр');
     }
     dispatch(getTtnThunk(ttnString));
