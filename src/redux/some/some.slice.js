@@ -7,18 +7,18 @@ const someSlice = createSlice({
   name: 'some',
   initialState: someInitState,
   reducers: {},
-  extraReducers: {
-    [getTtnThunk.pending]: state => {
-      state.status = STATUS.loading;
-    },
-    [getTtnThunk.fulfilled]: (state,{payload}) => {
-      state.status = STATUS.success;
-      state.data=payload
-
-    },
-    [getTtnThunk.error]: state => {
-      state.status = STATUS.error;
-    },
+  extraReducers: builder => {
+    builder
+      .addCase(getTtnThunk.pending, state => {
+        state.status = STATUS.loading;
+      })
+      .addCase(getTtnThunk.fulfilled, (state, { payload }) => {
+        state.status = STATUS.success;
+        state.data = payload;
+      })
+      .addCase(getTtnThunk.error, state => {
+        state.status = STATUS.error;
+      });
   },
 });
 

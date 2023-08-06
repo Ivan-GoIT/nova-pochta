@@ -18,7 +18,7 @@ const cutDataFromResponse = response => {
   return response;
 };
 
-export const getTtnInfo = async () => {
-  const res = await axios.post(BASE_URL, TRACKING).then(cutDataFromResponse);
+export const getTtnInfo = async (val) => {
+  const res = await axios.post(BASE_URL, TRACKING(val)).then(cutDataFromResponse);
   return res;
 };

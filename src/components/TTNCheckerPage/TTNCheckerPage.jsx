@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { getTtnThunk } from '../../redux/some/some.thunk';
 
 const TTNCheccerPage = () => {
-  const ttn = useSelector(state => state.ttn);
   const some = useSelector(state => state.some);
 
   const dispatch = useDispatch();
@@ -17,7 +16,11 @@ const TTNCheccerPage = () => {
     setTtnString(inputValue);
   };
   const onClickHandler = () => {
-    dispatch(getTtnThunk(ttn));
+    if (ttnString.length !== 14) {
+      console.log(ttnString.length);
+      alert('Должно быть 14 цыфр');
+    }
+    dispatch(getTtnThunk(ttnString));
   };
 
   return (
@@ -35,11 +38,13 @@ const TTNCheccerPage = () => {
         Get status TTN
       </button>
 
-      <div>
-        <p>Статус доставки: {some.data.statusTtn}</p>
-        <p>Відправлено: {some.data.citySender && some.data.sender}</p>
-        <p>Отримано: {some.data.recipient}</p>
-      </div>
+      {some.data && Object.keys(some.data).length > 0 && (
+        <div>
+          <p>Статус доставки: {some.data.statusTtn}</p>
+          <p>Відправлено: {some.data.citySender && some.data.sender}</p>
+          <p>Отримано: {some.data.recipient}</p>
+        </div>
+      )}
 
       <div>
         <p>Історія</p>
