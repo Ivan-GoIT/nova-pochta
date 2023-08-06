@@ -16,7 +16,7 @@ const someSlice = createSlice({
         state.status = STATUS.success;
         state.data = payload;
       })
-      .addCase(getTtnThunk.error, state => {
+      .addCase(getTtnThunk.rejected, state => {
         state.status = STATUS.error;
       });
   },
