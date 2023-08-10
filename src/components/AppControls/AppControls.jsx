@@ -1,16 +1,15 @@
-import css from './AppControls.modules.css'
+import css from './AppControls.module.css';
 import { NavLink } from 'react-router-dom';
 
 const AppControls = () => {
+  console.log(`${css.navigation}`);
   return (
     <header>
-      <nav className={css.navigation}>
-        <NavLink to="/" className={css.pageButton}>
+      <nav className={`${css.navigation}`}>
+        <NavLink to="/" className={`${css.pageButton}`}>
           Перевірити ТТН
         </NavLink>
-      </nav>
-      <nav className={css.navigation}>
-        <NavLink to="/offices" className={css.pageButton}>
+        <NavLink to="/offices" className={`${css.pageButton}`}>
           Список відділень
         </NavLink>
       </nav>
