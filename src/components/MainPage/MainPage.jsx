@@ -3,7 +3,7 @@ import AppControls from '../AppControls/AppControls';
 import { Outlet } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
-export const Layout = () => {
+const MainPage = () => {
   return (
     <>
       <AppControls />
@@ -14,3 +14,5 @@ export const Layout = () => {
     </>
   );
 };
+
+export default MainPage;
