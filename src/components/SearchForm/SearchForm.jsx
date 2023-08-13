@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux';
 import css from './SearchForm.module.css';
 
 import { useState } from 'react';
@@ -10,7 +11,10 @@ const SearchForm = ({
   formSubmitHandler,
   valueChecker,
 }) => {
+
   const [value, setValue] = useState('');
+
+  const dispatch= useDispatch()
 
   const onChangeHandler = env => {
     const { value } = env.currentTarget;
@@ -19,7 +23,7 @@ const SearchForm = ({
 
   const onSubmitHandler = evt => {
     evt.preventDefault();
-    formSubmitHandler(value);
+    dispatch(formSubmitHandler(value));
     setValue('');
   };
 

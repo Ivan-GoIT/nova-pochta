@@ -1,3 +1,0 @@
-export const ttnInitState = {
-  ttn: '',
-};

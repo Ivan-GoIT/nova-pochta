@@ -1,3 +1,4 @@
+import { getTtnInfoThunk } from 'redux/ttn/ttn.thunk';
 import ttnChecker from './ttnChecker';
 
 const {
@@ -10,7 +11,7 @@ const formProperties = {
     pattern: '\\d{14}',
     title: 'Номер відправлення має складатися з 14 цифр',
     placeholder: 'Введіть номер ТТН',
-    formSubmitHandler: ttnFormSubmitHandler,
+    formSubmitHandler: getTtnInfoThunk,
     valueChecker: ttnChecker,
   },
 };

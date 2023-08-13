@@ -1,1 +1,0 @@
-export const TTN_TO_STATE = 'TTN_TO_STATE';
