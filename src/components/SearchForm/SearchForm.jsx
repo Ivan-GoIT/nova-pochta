@@ -1,25 +1,34 @@
-import css from './SearchForm.module.css'
+import css from './SearchForm.module.css';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 const SearchForm = ({
+  name,
+  pattern,
   title,
   placeholder,
   formSubmitHandler,
   valueChecker,
 }) => {
   const [value, setValue] = useState('');
-console.log(value)
+
   const onChangeHandler = env => {
     const { value } = env.currentTarget;
     if (valueChecker(value)) setValue(value);
   };
+
+  const onSubmitHandler = evt => {
+    evt.preventDefault();
+    formSubmitHandler(value);
+    setValue('');
+  };
+
   return (
-    <form onSubmit={formSubmitHandler}>
+    <form onSubmit={onSubmitHandler}>
       <input
         type="text"
-        name="query"
-        pattern="^(5|2)([0-9]{13})$"
+        name={name}
+        pattern={pattern}
         required
         title={title}
         placeholder={placeholder}

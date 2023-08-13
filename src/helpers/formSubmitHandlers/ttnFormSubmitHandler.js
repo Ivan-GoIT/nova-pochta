@@ -1,7 +1,6 @@
-const ttnFormSubmitHandler = evt => {
-  evt.preventDefault();
-
-  console.log('ttnFormSubmitHandler');
+const ttnFormSubmitHandler = value => {
+ 
+  console.log('ttnFormSubmitHandler', value);
 };
 
 export default ttnFormSubmitHandler;

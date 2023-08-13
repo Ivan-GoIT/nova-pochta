@@ -1,0 +1,9 @@
+.input {
+  padding: 10px 0;
+  font-size: 16px;
+  text-align: center;
+}
+.input::placeholder {
+  padding: 10px 0;
+  font-size: 16px;
+}

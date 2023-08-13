@@ -2,7 +2,6 @@ import css from './AppControls.module.css';
 import { NavLink } from 'react-router-dom';
 
 const AppControls = () => {
-  console.log(`${css.navigation}`);
   return (
     <header>
       <nav className={`${css.navigation}`}>

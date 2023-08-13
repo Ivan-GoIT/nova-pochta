@@ -6,8 +6,9 @@ const {
 
 const formProperties = {
   ttn: {
-    title:
-      'Номер відправлення має складатися з 14 цифр та починатися з 2 або 5',
+    name: 'ttn-query',
+    pattern: '\\d{14}',
+    title: 'Номер відправлення має складатися з 14 цифр',
     placeholder: 'Введіть номер ТТН',
     formSubmitHandler: ttnFormSubmitHandler,
     valueChecker: ttnChecker,
