@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import css from './TTNCheckerPage.module.css';
 import { useState } from 'react';
-import { getTtnThunk } from '../../redux/some/some.thunk';
+import { getTtnThunk } from '../../redux2/some/some.thunk';
 
 const TTNCheccerPage = () => {
   const some = useSelector(state => state.some);
