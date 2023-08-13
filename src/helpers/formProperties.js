@@ -1,10 +1,6 @@
 import { getTtnInfoThunk } from 'redux/ttn/ttn.thunk';
 import ttnChecker from './ttnChecker';
 
-const {
-  default: ttnFormSubmitHandler,
-} = require('./formSubmitHandlers/ttnFormSubmitHandler');
-
 const formProperties = {
   ttn: {
     name: 'ttn-query',

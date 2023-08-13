@@ -1,12 +1,21 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import css from './TtnInfo.module.css';
 import { selectTtnInfo, selectTtnResStatus } from 'redux/ttn/ttn.selectors';
 import { STATUS } from 'constants/status.constants';
 import Loader from 'components/Loader/Loader';
+import { useEffect } from 'react';
+import { ttnInfoResetAction } from 'redux/ttn/ttn.slice';
 
 const TtnInfo = () => {
+  const dispatch = useDispatch();
   const ttnInfo = useSelector(selectTtnInfo);
   const status = useSelector(selectTtnResStatus);
+
+  useEffect(() => {
+    return () => {
+      dispatch(ttnInfoResetAction());
+    };
+  }, [dispatch]);
 
   let { statusTtn, sender, recipient, citySender } = ttnInfo || {};
   return (
