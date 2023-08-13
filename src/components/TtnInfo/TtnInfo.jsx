@@ -8,18 +8,15 @@ const TtnInfo = () => {
   const ttnInfo = useSelector(selectTtnInfo);
   const status = useSelector(selectTtnResStatus);
 
-  const { statusTtn, sender, recipient, citySender } = ttnInfo || {};
-  console.log('statusTtn', statusTtn);
-
-  console.log('ttnInfo', ttnInfo);
+  let { statusTtn, sender, recipient, citySender } = ttnInfo || {};
   return (
     <>
       {status === STATUS.loading && <Loader />}
       {status === STATUS.success && (
         <div>
-          <p>Статус доставки: {statusTtn}</p>
-          <p>Відправлено: {citySender && sender}</p>
-          <p>Отримано: {recipient}</p>
+          {statusTtn && <p>Статус доставки: {statusTtn}</p>}
+          {citySender && <p>Відправлено: {citySender && sender}</p>}
+          {recipient && <p>Отримано: {recipient}</p>}
         </div>
       )}
     </>
