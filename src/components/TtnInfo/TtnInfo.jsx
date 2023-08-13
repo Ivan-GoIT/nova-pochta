@@ -9,8 +9,9 @@ const TtnInfo = () => {
   const status = useSelector(selectTtnResStatus);
 
   const { statusTtn, sender, recipient, citySender } = ttnInfo || {};
-  
-console.log('ttnInfo', ttnInfo);
+  console.log('statusTtn', statusTtn);
+
+  console.log('ttnInfo', ttnInfo);
   return (
     <>
       {status === STATUS.loading && <Loader />}

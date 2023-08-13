@@ -1,6 +1,3 @@
-export const selectTtnInfo = state => {
-  console.log('Selecting TTN info', state.info);
-  return state.info;
-};
-export const selectTtnResStatus = state => state.status;
-export const selectTtnNumber = state => state.ttn;
+export const selectTtnInfo = state => state.ttn.info;
+export const selectTtnResStatus = state => state.ttn.status;
+export const selectTtnNumber = state => state.ttn.ttnNumber;

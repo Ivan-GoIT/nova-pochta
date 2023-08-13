@@ -1,7 +1,7 @@
 import { STATUS } from '../../constants/status.constants';
 
 export const ttnInitState = {
-  ttn: '',
+  ttnNumber: '',
   info: {},
-  status:STATUS.idle,
+  status: STATUS.idle,
 };
