@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
-import AppControls from '../AppControls/AppControls';
+import AppControls from 'components/AppControls/AppControls';
 import { Outlet } from 'react-router-dom';
-import Loader from '../Loader/Loader';
+import Loader from 'components/Loader/Loader';
 
 const MainPage = () => {
   return (

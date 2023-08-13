@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BASE_URL, TRACKING } from '../constants/axios.constants';
+import { BASE_URL, TRACKING } from 'constants/axios.constants';
 
 const cutDataFromResponse = response => {
   const {

@@ -7,10 +7,10 @@ const AppControls = () => {
     <header>
       <nav className={`${css.navigation}`}>
         <NavLink to="/" className={`${css.pageButton}`}>
-          Перевірити ТТН
+          <span>Перевірити ТТН</span>
         </NavLink>
         <NavLink to="/offices" className={`${css.pageButton}`}>
-          Список відділень
+          <span>Список відділень</span>
         </NavLink>
       </nav>
     </header>
