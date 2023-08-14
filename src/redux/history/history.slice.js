@@ -6,10 +6,10 @@ const historySlice = createSlice({
   initialState: historyInitState,
   reducers: {
     addTtnInHistoryAction: (state, { payload }) => {
-      state.unshift(payload);
+      if (!state.includes(payload)) state.unshift(payload);
     },
     clearHistoryAction: state => {
-      state.length=0;
+      state.length = 0;
     },
   },
 });
