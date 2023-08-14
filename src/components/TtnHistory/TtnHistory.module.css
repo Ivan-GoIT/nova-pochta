@@ -1,0 +1,8 @@
+.item {
+  margin: 5px;
+}
+.item:hover {
+  font-weight: 800;
+  color: var(--accent-text-color);
+  cursor: pointer;
+}

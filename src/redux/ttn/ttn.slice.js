@@ -7,7 +7,7 @@ const ttnSlice = createSlice({
   name: 'ttn',
   initialState: ttnInitState,
   reducers: {
-    ttnInfoResetAction: state => {
+    ttnInfoClearAction: state => {
       state.status = STATUS.idle;
       state.info = {};
     },
@@ -28,4 +28,4 @@ const ttnSlice = createSlice({
 });
 
 export const ttnReducer = ttnSlice.reducer;
-export const { ttnInfoResetAction } = ttnSlice.actions;
+export const { ttnInfoClearAction } = ttnSlice.actions;

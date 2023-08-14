@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 import css from './SearchForm.module.css';
 
 import { useState } from 'react';
+import { addTtnInHistoryAction } from 'redux/history/history.slice';
+import Button from 'components/Button/Button';
 
 const SearchForm = ({
   name,
@@ -11,10 +13,9 @@ const SearchForm = ({
   formSubmitHandler,
   valueChecker,
 }) => {
-
   const [value, setValue] = useState('');
 
-  const dispatch= useDispatch()
+  const dispatch = useDispatch();
 
   const onChangeHandler = env => {
     const { value } = env.currentTarget;
@@ -24,11 +25,12 @@ const SearchForm = ({
   const onSubmitHandler = evt => {
     evt.preventDefault();
     dispatch(formSubmitHandler(value));
+    dispatch(addTtnInHistoryAction(value));
     setValue('');
   };
 
   return (
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler} >
       <input
         type="text"
         name={name}
@@ -40,7 +42,8 @@ const SearchForm = ({
         onChange={onChangeHandler}
         value={value}
       />
-      <button type="submit">Перевірити статус</button>
+      {/* <button type="submit">Перевірити статус</button> */}
+    <Button type="submit" title="Перевірити статус"/>
     </form>
   );
 };
