@@ -1,5 +1,5 @@
 export const BASE_URL='https://api.novaposhta.ua/v2.0/json/ '
-export const TRACKING=(val)=>({
+export const trackingObjGenerator=(val)=>({
     modelName: 'TrackingDocument',
     calledMethod: 'getStatusDocuments',
     methodProperties: {
