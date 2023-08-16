@@ -20,11 +20,11 @@ const TtnHistory = () => {
   };
 
   return (
-    <div className={css.history}>
-      <h2 className={`${css.title}`}>Історія</h2>
-      <ul className={css.list}>
-        {history.length > 0 &&
-          history.map(item => (
+    history.length > 0 && (
+      <div className={css.history}>
+        <h2 className={`${css.title}`}>Історія</h2>
+        <ul className={css.history_list}>
+          {history.map(item => (
             <li
               key={nanoid()}
               className={`${css.item}`}
@@ -33,15 +33,14 @@ const TtnHistory = () => {
               {item}
             </li>
           ))}
-      </ul>
-      {history.length > 0 && (
+        </ul>
         <Button
           type="button"
           title="Очистити"
           onClickHandler={clearHistoryHandler}
         />
-      )}
-    </div>
+      </div>
+    )
   );
 };
 

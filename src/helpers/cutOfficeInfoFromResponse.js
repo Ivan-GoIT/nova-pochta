@@ -4,6 +4,6 @@ export const cutOfficeInfoFromResponse = response => {
     acc.push({ description, schedule });
     return acc;
   }, []);
-
+  console.log(result);
   return result;
 };

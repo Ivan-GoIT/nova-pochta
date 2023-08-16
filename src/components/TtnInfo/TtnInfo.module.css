@@ -1,0 +1,5 @@
+.info {
+  padding: 20px;
+  background-color: rgb(241, 237, 232);
+  box-shadow: inset 0px 0px 3px 2px var(--main-button-text-color);
+}

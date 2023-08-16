@@ -10,6 +10,12 @@ const formProperties = {
     formSubmitHandler: getTtnInfoThunk,
     valueChecker: ttnChecker,
   },
+  history: {
+    name: 'history-query',
+    title: 'Місто',
+    placeholder: 'Введіть населений пункт',
+    formSubmitHandler: getTtnInfoThunk,
+  },
 };
 
 export default formProperties;

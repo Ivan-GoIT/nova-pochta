@@ -24,7 +24,7 @@ const TtnInfo = () => {
     <>
       {status === STATUS.loading && <Loader />}
       {status === STATUS.success && (
-        <div>
+        <div className={css.info}>
           {ttnNumber && <p>Номер ТТН: {ttnNumber}</p>}
           {statusTtn && <p>Статус доставки: {statusTtn}</p>}
           {citySender && <p>Відправлено: {citySender && sender}</p>}
