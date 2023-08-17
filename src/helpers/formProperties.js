@@ -1,5 +1,6 @@
 import { getTtnInfoThunk } from 'redux/ttn/ttn.thunk';
 import ttnChecker from './ttnChecker';
+import cityNameChecker from './cityNameChecker';
 
 const formProperties = {
   ttn: {
@@ -9,12 +10,16 @@ const formProperties = {
     placeholder: 'Введіть номер ТТН',
     formSubmitHandler: getTtnInfoThunk,
     valueChecker: ttnChecker,
+    btnTitle: 'Перевірити статус',
   },
-  history: {
-    name: 'history-query',
+  office: {
+    name: 'offise-query',
+    pattern: '/^[a-zа-яіїєґ-]*+(?:s[a-zа-яіїєґ-]+)*$/i',
     title: 'Місто',
-    placeholder: 'Введіть населений пункт',
+    placeholder: 'Введіть назву',
     formSubmitHandler: getTtnInfoThunk,
+    valueChecker: cityNameChecker,
+    btnTitle: 'Показати відділення',
   },
 };
 

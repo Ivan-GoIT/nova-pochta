@@ -10,7 +10,8 @@ const SearchForm = ({
   title,
   placeholder,
   formSubmitHandler,
-  valueChecker=()=>{},
+  btnTitle,
+  valueChecker = () => {},
 }) => {
   const [value, setValue] = useState('');
 
@@ -18,7 +19,10 @@ const SearchForm = ({
 
   const onChangeHandler = env => {
     const { value } = env.currentTarget;
+    console.log('value1', value);
+
     if (!valueChecker(value)) return;
+    console.log('value2', value);
     setValue(value);
   };
 
@@ -41,7 +45,7 @@ const SearchForm = ({
         onChange={onChangeHandler}
         value={value}
       />
-      <Button type="submit" title="Перевірити статус" />
+      <Button type="submit" title={btnTitle} />
     </form>
   );
 };

@@ -1,0 +1,18 @@
+.offise_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgb(241, 237, 232);
+  box-shadow: inset 0px 0px 3px 2px var(--main-button-text-color);
+  margin-bottom: 40px;
+}
+.offise_list > p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.offise_list > p:last-child {
+  margin-bottom: 0;
+}

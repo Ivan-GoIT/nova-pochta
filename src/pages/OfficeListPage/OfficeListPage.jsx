@@ -1,20 +1,16 @@
-import TtnHistory from "components/TtnHistory/TtnHistory";
-import TtnInfo from "components/TtnInfo/TtnInfo";
+import OfficeList from "components/OfficeList/OfficeList";
+import SearchForm from "components/SearchForm/SearchForm";
+import formProperties from "helpers/formProperties";
 
-const { default: SearchForm } = require("components/SearchForm/SearchForm");
-const { default: formProperties } = require("helpers/formProperties");
 
-const TtnCheckerPage=()=>{
-    return (
-      <section>
-        <SearchForm {...formProperties.ttn} />
+const OfficeListPage = () => {
+  return (
+    <section>
+      <SearchForm {...formProperties.office} />
 
-        <div>
-            <TtnInfo/>
-            <TtnHistory/>
-        </div>
-      </section>
-    );
-}
+      <OfficeList />
+    </section>
+  );
+};
 
-export default TtnCheckerPage;
+export default OfficeListPage;
