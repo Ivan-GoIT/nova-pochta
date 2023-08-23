@@ -6,5 +6,6 @@ export const getOfficeInfo = async city => {
   const res = await axios
     .post(BASE_URL, officesObjGenerator(city))
     .then(cutOfficeInfoFromResponse);
+
   return res;
 };

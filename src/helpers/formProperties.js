@@ -1,4 +1,5 @@
 import { getTtnInfoThunk } from 'redux/ttn/ttn.thunk';
+import { getOfficesAtCityThunk } from 'redux/offices/offices.thunk';
 import ttnChecker from './ttnChecker';
 import cityNameChecker from './cityNameChecker';
 
@@ -14,10 +15,9 @@ const formProperties = {
   },
   office: {
     name: 'offise-query',
-    pattern: '/^[a-zа-яіїєґ-]*+(?:s[a-zа-яіїєґ-]+)*$/i',
     title: 'Місто',
     placeholder: 'Введіть назву',
-    formSubmitHandler: getTtnInfoThunk,
+    formSubmitHandler: getOfficesAtCityThunk,
     valueChecker: cityNameChecker,
     btnTitle: 'Показати відділення',
   },

@@ -19,10 +19,9 @@ const SearchForm = ({
 
   const onChangeHandler = env => {
     const { value } = env.currentTarget;
-    console.log('value1', value);
 
     if (!valueChecker(value)) return;
-    console.log('value2', value);
+
     setValue(value);
   };
 

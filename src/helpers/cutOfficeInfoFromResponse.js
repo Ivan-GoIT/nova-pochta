@@ -1,9 +1,9 @@
 export const cutOfficeInfoFromResponse = response => {
-  const result = response.data.reduce((acc, item) => {
+  const result = response.data.data.reduce((acc, item) => {
     const { Description: description, Schedule: schedule } = item;
-    acc.push({ description, schedule });
+    const [place,address]=description.split(':')
+    acc.push({ place,address, schedule });
     return acc;
   }, []);
-  console.log(result);
   return result;
 };

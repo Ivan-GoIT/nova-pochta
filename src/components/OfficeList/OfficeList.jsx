@@ -8,7 +8,7 @@ const dispatch=useDispatch()
 
   return (
     <div className={css.offise_list}>
-      <p>OfficeList</p>
+      
     </div>
   );
 };
