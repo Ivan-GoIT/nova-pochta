@@ -8,7 +8,6 @@ const officesSlice = createSlice({
   initialState: officesInitState,
   reducers: {
     addCitiInSateAction: (state, { payload }) => {
-      console.log('officesSlice', payload);
       state.city = payload;
     },
   },

@@ -7,5 +7,5 @@ export const getOfficeInfo = async city => {
     .post(BASE_URL, officesObjGenerator(city))
     .then(cutOfficeInfoFromResponse);
 
-  return res;
+  return res ;
 };
