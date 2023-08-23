@@ -18,7 +18,7 @@ const officesSlice = createSlice({
       })
       .addCase(getOfficesAtCityThunk.fulfilled, (state, { payload }) => {
         state.status = STATUS.success;
-        state.offices = payload;
+        state.offices = payload.offices;
       })
       .addCase(getOfficesAtCityThunk.rejected, state => {
         state.status = STATUS.error;

@@ -19,7 +19,7 @@ const TtnInfo = () => {
     };
   }, [dispatch]);
 
-  let { ttnNumber,statusTtn, sender, recipient, citySender } = ttnInfo || {};
+  const { ttnNumber,statusTtn, sender, recipient, citySender } = ttnInfo || {};
   return (
     <>
       {status === STATUS.loading && <Loader />}
