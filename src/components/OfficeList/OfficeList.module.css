@@ -1,4 +1,7 @@
-.offise_list {
+.city{
+  text-align: center;
+}
+.offises_list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,10 +12,51 @@
   box-shadow: inset 0px 0px 3px 2px var(--main-button-text-color);
   margin-bottom: 40px;
 }
-.offise_list > p:not(:last-child) {
+.offises_list > p:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.offise_list > p:last-child {
+.offises_list > p:last-child {
   margin-bottom: 0;
+}
+
+.offises_list > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.info {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.address {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+  display: none; /* По умолчанию подсказка скрыта */
+}
+.item {
+}
+.item:hover {
+  cursor: pointer;
+  display: block;
+}
+
+.item:hover > .tooltip {
+  display: block;
 }

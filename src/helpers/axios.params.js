@@ -1,5 +1,4 @@
 import { API_KEY } from 'constants/axios.constants';
-
 export const BASE_URL = 'https://api.novaposhta.ua/v2.0/json/ ';
 
 export const trackingObjGenerator = val => ({
